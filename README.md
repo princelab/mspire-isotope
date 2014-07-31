@@ -38,11 +38,13 @@ monoisotopic_isotopes = Mspire::Isotope::ISOTOPES.select(&:mono)
 
 ### Convenience method for access by element
 
+```ruby
 # find the lightest carbon isotope
 isotope = Mspire::Isotope[:C]
 
 # find the monoisotopic (i.e., most abundant isotope) of carbon
 isotope = Mspire::Isotope[:C].find(&:mono)
+```
 
 ### Information available
 
