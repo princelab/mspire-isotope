@@ -1,5 +1,5 @@
 module Mspire
-  module Isotope
+  class Isotope
     VERSION = "0.0.1"
   end
 end

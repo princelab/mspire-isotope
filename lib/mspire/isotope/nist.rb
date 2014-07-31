@@ -1,3 +1,4 @@
+require 'yaml'
 require 'mspire/isotope'
 
 module Mspire::Isotope::NIST
