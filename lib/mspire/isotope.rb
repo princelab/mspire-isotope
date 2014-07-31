@@ -2,6 +2,13 @@ require "mspire/isotope/version"
 
 module Mspire
   class Isotope
+    class << self
+      attr_accessor :element_hash
+      def by_element(element)
+        element_hash[element]
+      end
+      alias_method :[], :by_element
+    end
     MEMBERS = [
       :atomic_number, 
       :element, 
@@ -18,12 +25,14 @@ module Mspire
   end
 end
 
-require 'mspire/isotope/neese'
-# sets Mspire::Isotope::BY_ELEMENTS and Mspire::Isotope::ISOTOPES
 
+# sets Mspire::Isotope::BY_ELEMENTS and Mspire::Isotope::ISOTOPES
+require 'mspire/isotope/neese'
 module Mspire
   class Isotope
     BY_ELEMENT = Mspire::Isotope::Neese::BY_ELEMENT
     ISOTOPES = Mspire::Isotope::Neese::ISOTOPES
+
+    self.element_hash = Mspire::Isotope::Neese::BY_ELEMENT
   end
 end
