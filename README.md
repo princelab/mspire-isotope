@@ -1,6 +1,6 @@
 # Mspire::Isotope
 
-mspire library that can retrieve (from NIST) and yield element isotope information.  Uses Neese biological ratios by default.
+mspire library that can retrieve (from NIST) and yield element isotope information.  Uses Neese biological ratios by default.  See [mspire-molecular_formula](https://github.com/princelab/mspire-molecular_formula) for isotope distribution calculations and [mspire-mass](https://github.com/princelab/mspire-mass) for direct mass access.
 
 ## Installation
 
